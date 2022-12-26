@@ -8,8 +8,8 @@ mongoose.connect("mongodb+srv://VidipGhosh:gmWY4fm8VfLw4aR4@cluster0.l33c0in.mon
 var port = process.env.PORT || 3001;
 const io = require("socket.io")(port, {
     cors: {
-        // origin: "https://docs-frontend-seven.vercel.app",
-        origin: "http://localhost:3000",
+        origin: "https://docs-frontend-seven.vercel.app",
+        // origin: "http://localhost:3000",
         methods: ["GET", "POST"],
     },
 })
