@@ -1,8 +1,10 @@
+import * as dotenv from 'dotenv';
 const mongoose = require('mongoose');
 const Document = require('./Document');
 // https://docs-frontend-seven.vercel.app
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://VidipGhosh:gmWY4fm8VfLw4aR4@cluster0.l33c0in.mongodb.net/google-docs-clone", () => {
+dotenv.config();
+mongoose.connect(`mongodb+srv://VidipGhosh:${process.env.PASSWORD}@cluster0.l33c0in.mongodb.net/google-docs-clone`, () => {
     console.log('Connected MongoDb');
 })
 var port = process.env.PORT || 3001;
